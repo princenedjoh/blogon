@@ -5,6 +5,7 @@
  margin:0;
  padding:0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 @font-face {
   font-family: 'Calibri';
   font-style: normal;
@@ -100,13 +101,13 @@ nav{
   float:left;
   font-size:30px;
   height: inherit;
-  font-family:cursive;
+  font-family: 'special elite', sans-serif;
   color:white;
   font-weight: bold;
   cursor: pointer;
   margin-left: 10px;
   position: relative;
-  top: 10px;
+  top: 20px;
 }
 .dashboardicon{
   width: 33px;
@@ -272,7 +273,7 @@ nav{
   .logo{
     position:relative;
     font-size: 25px;
-    top: 6px;
+    top: 20px;
     left: 34%;
   }
   nav{
