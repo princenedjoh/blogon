@@ -41,11 +41,29 @@ function slideshow(){
        document.getElementById("mainslide").setAttribute("src", "images/b8.jpg")
 	}
 	else if(a == 2){
-		document.getElementById("mainslide").setAttribute("src", "images/b7.jpg")
+		document.getElementById("mainslide").setAttribute("src", "images/b15.jpg")
 	 }
 	 else if(a == 3){
 		document.getElementById("mainslide").setAttribute("src", "images/b11.jpg")
 	 };
+	 if(a == 1){
+		 document.getElementsByClassName("slidenav1")[0].style.background = "#46846e"
+	 }
+	 else{
+		document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
+	 };
+	 if(a == 2){
+		document.getElementsByClassName("slidenav2")[0].style.background = "#46846e"
+	}
+	else{
+	   document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
+	};
+	if(a == 3){
+		document.getElementsByClassName("slidenav3")[0].style.background = "#46846e"
+	}
+	else{
+	   document.getElementsByClassName("slidenav3")[0].style.background = "transparent"
+	};
 	 if (a < 3){
 		 a = a + 1
 	 }
@@ -54,6 +72,24 @@ function slideshow(){
 	 };
 	 setTimeout("slideshow()", 5000);
 }
+function clicknav1(){
+	document.getElementById("mainslide").setAttribute("src", "images/b8.jpg");
+	document.getElementsByClassName("slidenav1")[0].style.background = "#46846e";
+	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
+	document.getElementsByClassName("slidenav3")[0].style.background = "transparent"
+};
+function clicknav2(){
+	document.getElementById("mainslide").setAttribute("src", "images/b15.jpg");
+	document.getElementsByClassName("slidenav2")[0].style.background = "#46846e";
+	document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
+	document.getElementsByClassName("slidenav3")[0].style.background = "transparent"
+};
+function clicknav3(){
+	document.getElementById("mainslide").setAttribute("src", "images/b11.jpg");
+	document.getElementsByClassName("slidenav3")[0].style.background = "#46846e";
+	document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
+	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
+};
 document.addEventListener("DOMContentloaded", slideshow());
 
 
