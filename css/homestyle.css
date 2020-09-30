@@ -54,7 +54,7 @@ body{
 	letter-spacing:2px;
 	font-size:30px;
 	background:#96af96;
-	margin:20px 0 10px 0;
+	margin:20px 0 30px 0;
 	padding:10px 10px;
 	border-left: solid 10px green;
  }
@@ -68,13 +68,31 @@ body{
 .newshighlightcontainer{
 	width:250px;
 	height:260px;
-	box-shadow:0 0 20px 0px;
 	background:#96af96;
-	text-align:center;
+  margin:0 auto;
+  display:inline-block;
+  margin:0 20px;
+  transform: translateX(0px);
+}
+.placeinline{
+  height:260px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  transform: translateX(-500px);
+}
+.newslide{
+  width:100%;
+  overflow:hidden;
+  height:260px;
+  position:relative;
 }
 .newshighlightcontainer img{
 	width:250px;
 	height:170px;
+}
+#body{
+  padding:0 1%;
 }
 
  /*---------------------------------------------------
@@ -207,8 +225,45 @@ nav{
   margin:0 10px;
 }
  /*--------------*/
-
-
+.previouscontainer, .nextcontainer{
+  position: absolute;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: bold;
+  color:rgba(255, 255, 255, 0.616);
+  background: rgba(0, 0, 0, 0.644);
+  padding:20px 0 0 20px;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  pointer:curser;
+  top:40%
+}
+.nextcontainer{
+  left:95%;
+}
+.previouscontainer{
+  left:1%;
+}
+.previouscontainer:hover, .nextcontainer:hover{
+  transform:scale(1.1);
+  color:rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+.previous{
+	border-left:5px solid rgba(255, 255, 255, 0.788);
+	border-bottom:5px solid rgba(255, 255, 255, 0.788);
+	width:13px;
+	height:13px;
+	transform:rotate(45deg);
+}
+.next{
+	border-top:5px solid rgba(255, 255, 255, 0.788);
+	border-right:5px solid rgba(255, 255, 255, 0.788);
+	width:13px;
+	height:13px;
+	transform:rotate(45deg);	
+}
 
 
 
@@ -228,8 +283,8 @@ nav{
 	background:#0d0c1b;
 	width:100%;
 	height:200px;
-	padding:20px;
-	margin-top:30px;
+  margin-top:50px;
+  z-index: 1;
 }
  /*----------------------------------------------------
          end of footer
@@ -292,7 +347,34 @@ nav{
     border-radius: 50px;
     border:rgba(0, 0, 0, 0.562) 1px solid;
   }
+  .newshighlightcontainer{
+    display:block;
+    width:100%;
+    margin:10px auto;
+    transform: translateX(0px);
+  }
+  .newshighlightcontainer img{ 
+    width:100%;
+  }
+  .newslide{
+    overflow: visible;
+    display: block;
+    height: fit-content;
+    width: 100%;
+ }
+ .placeinline{
+   overflow: visible;
+   display: block;
+   transform: translateX(0);
+   height: fit-content;
+   width: 90%;
+ }
+ .previouscontainer, .nextcontainer{
+   display:none;
+ }
+
 }
+
 
 
 

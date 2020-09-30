@@ -31,9 +31,9 @@ function menuitems3(){
 //--------------------------------------------
 
 
-//--------------------------------------------
+//------------------------------------------------------------------------------------------------------------
 //    slideshow
-//--------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
 var a = 1
 function slideshow(){
 	
@@ -76,21 +76,38 @@ function clicknav1(){
 	document.getElementById("mainslide").setAttribute("src", "images/b8.jpg");
 	document.getElementsByClassName("slidenav1")[0].style.background = "#46846e";
 	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
-	document.getElementsByClassName("slidenav3")[0].style.background = "transparent"
+	document.getElementsByClassName("slidenav3")[0].style.background = "transparent";
+	a = 1;
+
 };
 function clicknav2(){
 	document.getElementById("mainslide").setAttribute("src", "images/b15.jpg");
 	document.getElementsByClassName("slidenav2")[0].style.background = "#46846e";
 	document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
 	document.getElementsByClassName("slidenav3")[0].style.background = "transparent"
+	a = 2;
 };
 function clicknav3(){
 	document.getElementById("mainslide").setAttribute("src", "images/b11.jpg");
 	document.getElementsByClassName("slidenav3")[0].style.background = "#46846e";
 	document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
 	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
+	a = 3
 };
 document.addEventListener("DOMContentloaded", slideshow());
 
 
-//--------------------------------------------
+//----------------------------------------------------------------------------------------------------------
+
+
+
+//-------------------------------------------------------------------------------------------------------------
+//            sliding of news highlight
+//-------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------
