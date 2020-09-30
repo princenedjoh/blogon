@@ -73,6 +73,7 @@ body{
   display:inline-block;
   margin:0 20px;
   transform: translateX(0px);
+  font-weight:bold;
 }
 .placeinline{
   height:260px;
@@ -109,10 +110,10 @@ body{
 nav{
 	width:100%;
 	height:60px;
-	background:#477b60b3;
+	background:#477b6000;
   position: fixed;
-  z-index: 1;
-  box-shadow: 0 0 10px 0;
+  z-index: 2;
+
   
 }
 .logo{
@@ -185,10 +186,12 @@ nav{
    color:#ffffff;
  }
   .menuitems .active a{
-    color: #ffffff
+    color: #ffffff;
+    font-weight:bold;
   }
  .menuitems div a:hover{
-   color:#ffffff
+   color:#ffffff;
+   font-weight:bold;
  }
 
 
@@ -207,8 +210,6 @@ nav{
   overflow: hidden;
 }
 .slide1 img{
-  width:100%;
-  height: 100%;
 }
 .slidenav{
   position:relative;
@@ -264,9 +265,24 @@ nav{
 	height:13px;
 	transform:rotate(45deg);	
 }
-
-
-
+.newshighlightcontainer .text{
+  margin-left:5px;
+}
+.timeposted{
+  margin-left: 2px;
+  color:#0000009e;
+  position:absolute;
+  top:90.5%;
+}
+.timeposted span{
+  position:relative;
+  left:5px;
+  top:-6px;
+}
+.timeposted img{
+  width:22px;
+  height:22px;
+}
   /*---------------------------------------------------
      END OF MAIN
  ------------------------------------------------------*/
@@ -367,11 +383,18 @@ nav{
    display: block;
    transform: translateX(0);
    height: fit-content;
-   width: 90%;
+   width: 95%;
  }
  .previouscontainer, .nextcontainer{
    display:none;
  }
+ .timeposted img{
+  width:20px;
+  height:20px;
+}
+.timeposted span{
+  top:-4px;
+}
 
 }
 
