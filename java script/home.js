@@ -38,13 +38,25 @@ var a = 1
 function slideshow(){
 	
     if(a == 1){
-       document.getElementById("mainslide").setAttribute("src", "images/b8.jpg")
+	   document.getElementById("mainslide").setAttribute("src", "images/b8.jpg");
+	   document.getElementsByClassName("slidetext1")[0].innerHTML = "bringing the news your way";
+	   document.getElementsByClassName("news button")[0].innerHTML = "latest news";
+	   document.getElementsByClassName("news button")[0].style.color = "white";
+	   document.getElementsByClassName("slidecontentmobile")[0].style.top = "220px";
 	}
 	else if(a == 2){
 		document.getElementById("mainslide").setAttribute("src", "images/b15.jpg")
+		document.getElementsByClassName("slidetext1")[0].innerHTML = "making your aware of the world";
+		document.getElementsByClassName("news button")[0].innerHTML = "Entertainment";
+		document.getElementsByClassName("news button")[0].style.color = "#8e12f3";
+		document.getElementsByClassName("slidecontentmobile")[0].style.top = "200px";
 	 }
 	 else if(a == 3){
 		document.getElementById("mainslide").setAttribute("src", "images/b11.jpg")
+		document.getElementsByClassName("slidetext1")[0].innerHTML = "the world as a global village";
+		document.getElementsByClassName("news button")[0].innerHTML = "Sports";
+		document.getElementsByClassName("news button")[0].style.color = "#0fe46e";
+		document.getElementsByClassName("slidecontentmobile")[0].style.top = "220px";
 	 };
 	 if(a == 1){
 		 document.getElementsByClassName("slidenav1")[0].style.background = "#46846e"

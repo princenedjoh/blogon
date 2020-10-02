@@ -141,8 +141,8 @@ body{
   border-left: solid 10px green;
   border-right: solid 10px green;
   font-weight:bold;
-  color: rgba(0, 0, 0, 0.541);
-  display:none;
+  color: rgb(255, 255, 255);
+  display:block;
 }
 
 .sidebar{
@@ -233,7 +233,7 @@ nav{
   position: fixed;
   display:none;
   top:55.2px;
-  z-index:2;
+  z-index:3;
 }
  .menuitems div a{
 
@@ -300,9 +300,7 @@ nav{
   z-index: 2;
 }
 
-.slidetxt pre{
-	font-family:;
-}
+
 .circles{
 	display:flex;
   flex-wrap:wrap;
@@ -358,8 +356,31 @@ nav{
   border-radius: 50px;
   width: 40px;
   height: 40px;
-  pointer:curser;
+  cursor:pointer;
   top:40%
+}
+.slidecontentmobile{
+  z-index: 2;
+  position: absolute;;
+  top:220px;
+  left:10px;
+  display: none;
+}
+.slidecontentmobile .slidetext1{
+  font-size: 30px;
+  color:rgb(255, 255, 255);
+  margin-bottom:10px;
+}
+.slidecontentmobile button{
+  padding:12px;
+  background: transparent;
+  border: 1px white solid;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  outline: none;
+}
+.slidecontentmobile button:hover{
+  background: #3e8f49a1;
 }
 .nextcontainer{
   left:95%;
@@ -570,6 +591,9 @@ display:none;
 }
 .slidecontent{
   display:none;
+}
+.slidecontentmobile{
+  display: block;
 }
 
 }
