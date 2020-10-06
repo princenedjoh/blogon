@@ -42,6 +42,7 @@ function slideshow(){
 	   document.getElementsByClassName("slidetext1")[0].innerHTML = "bringing the news your way";
 	   document.getElementsByClassName("news button")[0].innerHTML = "latest news";
 	   document.getElementsByClassName("news button")[0].style.color = "white";
+	   document.getElementsByClassName("news button")[0].style.border = "1px solid white";
 	   document.getElementsByClassName("slidecontentmobile")[0].style.top = "220px";
 	}
 	else if(a == 2){
@@ -49,6 +50,7 @@ function slideshow(){
 		document.getElementsByClassName("slidetext1")[0].innerHTML = "making your aware of the world";
 		document.getElementsByClassName("news button")[0].innerHTML = "Entertainment";
 		document.getElementsByClassName("news button")[0].style.color = "#8e12f3";
+		document.getElementsByClassName("news button")[0].style.border = "1px solid #8e12f3";
 		document.getElementsByClassName("slidecontentmobile")[0].style.top = "200px";
 	 }
 	 else if(a == 3){
@@ -56,6 +58,7 @@ function slideshow(){
 		document.getElementsByClassName("slidetext1")[0].innerHTML = "the world as a global village";
 		document.getElementsByClassName("news button")[0].innerHTML = "Sports";
 		document.getElementsByClassName("news button")[0].style.color = "#0fe46e";
+		document.getElementsByClassName("news button")[0].style.border = "1px solid #0fe46e";
 		document.getElementsByClassName("slidecontentmobile")[0].style.top = "220px";
 	 };
 	 if(a == 1){
@@ -116,8 +119,29 @@ document.addEventListener("DOMContentloaded", slideshow());
 //-------------------------------------------------------------------------------------------------------------
 //            sliding of news highlight
 //-------------------------------------------------------------------------------------------------------------
+var slide = 0
 
-
+function next(){
+	if(document.getElementsByClassName("newshighlightcontainer")[0].style.transform = ""){
+	document.querySelectorAll(".newshighlightcontainer")[0].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[1].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[2].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[3].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[4].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[5].style.transform = "translateX(-870px)";
+	document.querySelectorAll(".newshighlightcontainer")[6].style.transform = "translateX(-870px)";
+}
+else{
+	slide = slide - 290;
+	document.querySelectorAll(".newshighlightcontainer")[0].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[1].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[2].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[3].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[4].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[5].style.transform = "translateX(${slide})";
+	document.querySelectorAll(".newshighlightcontainer")[6].style.transform = "translateX(${slide})";
+}
+}
 
 
 

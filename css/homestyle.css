@@ -79,14 +79,15 @@ body{
   color:rgba(0, 0, 0, 0.747);
   box-shadow: 0 0 10px 0;
   margin-top: 20px;
+  transform: translateX(0px);
 }
+
 .placeinline{
   height:300px;
   display: flex;
   width: 86%;
   margin: 0 auto;
   overflow: hidden;
-  transform: translateX();
 }
 .newslide{
   width:100%;
@@ -340,7 +341,7 @@ nav{
 .slidenav1, .slidenav2, .slidenav3{
   width:60px;
   height:8px;
-  border:rgba(0, 0, 0, 0.562) 2px solid;
+  border:#000000c0 2px solid;
   display:inline-block;
   margin:0 10px;
 }
@@ -526,7 +527,7 @@ nav{
     width:20px;
     height:20px;
     border-radius: 50px;
-    border:rgba(0, 0, 0, 0.562) 1px solid;
+    border:#ffffff50 1px solid;
   }
   .newshighlightcontainer{
     display:block;
@@ -576,6 +577,11 @@ nav{
 }
 .title{
   margin:20px 0 0px 0;
+  padding:10px 5px;
+  font-size:15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:#000000d2;
 }
 .more{
   display: block;
