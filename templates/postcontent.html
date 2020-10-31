@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Post Content
+  </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{url_for('static', filename='css/postcontent.css')}}">
+ </head>
+
+
+ <!--------------------------------------------------------------------------------------
+                     navbar 
+  --------------------------------------------------------------------------------------->
+ <div class="navbar">
+  <div class="logocontainer">
+  <b class="logo"><a href="postcontent">Post Content</a></b>
+  </div>
+ </div>
+<!------------------------------------------------------------------------------------------->
+
+
+
+
+ <body>
+
+  <!-------------------------------------------------------------------------------------------
+                                  blog post form
+  --------------------------------------------------------------------------------------------->
+  <div class="formcontainer">
+   <form class="postcontent" action="postcontent" method="post" enctype="multipart/form-data">
+	 <div class="formtitle">Title</div>
+   <textarea class="titlecontent" type="text" placeholder="title" name="title"></textarea>
+
+   <div class="formtitle">Author's name</div>
+   <input class="nameofauthor" type="text" name="nameofauthor" placeholder="input name of author">
+   
+   <div class="imgview2">
+   <div class="formtitle">img</div>
+   <input type="file" class="img1" name="img1">
+   </div>
+   
+   <div class=imgview>
+   <div class="formtitle">img</div>
+   <input type="file" class="img" name="img">
+   </div>
+
+   <div class=imgview1>
+    <div class="formtitle">img</div>
+    <input type="file" class="img3" name="img3">
+    </div>
+   
+   <div class="imgbutton" onclick="add()">Add +</div>
+
+   <div class="contentview">
+	 	 <div class="formtitle">content</div>
+   <textarea  class="formcontent" type="text" placeholder="enter the content" name="content"></textarea>
+   </div>
+
+   <div class="contentview2">
+    <div class="formtitle">content</div>
+ <textarea  class="formcontent" type="text" placeholder="enter the content" name="content"></textarea>
+  </div>
+
+ <div class="contentbutton" onclick="add0()">Add +</div>
+ <div class="formtitle" id="cattitle">
+   category
+ </div>
+ <hr><br>
+ <div class="allcat">
+  <div class="newscat"><div class="newstitle">News</div> <input class="news" name="news" type="checkbox" value="News"></div>
+  <div class="entertainmentcat"><div class="entertainmenttitle">entertainment</div> <input class="entertainment" name="entertainment" type="checkbox"></div>
+  <div class="sportscat"><div class="sportstitle">Sports</div> <input class="sports" name="sports" type="checkbox"></div>
+ </div>
+
+   <br><a><button type="submit" class="post button">POST</button></a>
+   
+   </form>
+  </div>
+  <!------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+  <!-------------------------------------------------------------------------------------------
+                            link javascript
+  ------------------------------------------------------------------------------------------->
+<script src="static/java script/postcontent.js"></script>
+
+
+
+  <!------------------------------------------------------------------------------------------->
+
+
+
+
+ </body>
+</html>

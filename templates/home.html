@@ -7,7 +7,7 @@
   <title>
    Home
   </title>
-  <link rel="stylesheet" href="css/homestyle.css">
+  <link rel="stylesheet" href="static/css/homestyle.css">
  </head>
  <body>
 
@@ -16,9 +16,12 @@
             navigation bar
 --------------------------------------------------------------------------------------------------------------------->
   <nav id="navbar">
-   <div><img class="dashboardicon" onclick="menudropdown()" src="icons/dashboard.png"></div>
+    <div class="searchbutton">
+      <img src="static/icons/magnifier.png">
+    </div>
+   <div><img class="dashboardicon" onclick="menudropdown()" src="{{url_for('static', filename='icons/dashboard.png')}}"></div>
    <div class="logo">
-    <span class="logoin">Go</span>News
+    <span class="logoin">BLog</span>on
    </div>
    <div class="menuitems">
     <div class="active"><a href="#">Home</a></div>
@@ -80,13 +83,13 @@ through our news...</pre></div>
    <div class="slidetxt1">appreciating everything in accordance to all cellular stuff hah!</div>
    <div class="circles">
     <div class="circles1">
-     <img src="icons/foot.png">
+     <img src="{{url_for('static', filename='icons/foot.png')}}">
     </div>
     <div class="circles1">
-     <img src="icons/menu.png">
+     <img src="{{url_for('static', filename='icons/menu.png')}}"">
     </div>
     <div class="circles1">
-     <img src="icons/music.png">
+     <img src="{{url_for('static', filename='icons/music.png')}}">
     </div>
    </div>
   </div>
@@ -127,7 +130,7 @@ through our news...</pre></div>
   </div>
   <div class="placeinline">
    <div class="newshighlightcontainer">
-     <img src="newsimages/news1.jpg">
+     <img src="static/newsimages/news1.jpg">
      <div class="text">reassuring you that the vote is good project in anything ad f;ajfisdjfoasifoashfasjcfiasbfk</div>
      <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">7 </span><span class="timetext">mins ago</span>
@@ -136,7 +139,7 @@ through our news...</pre></div>
 
 
    <div class="newshighlightcontainer">
-    <img src="newsimages/news2.jpg">
+    <img src="static/newsimages/news2.jpg">
     <div class="text">r afa afasfafaf f a afsfewt yrj ehj ether rg wehe gdf er hergh ereassurfsafing you that the vote is good</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">6 </span><span class="timetext">mins ago</span>
@@ -144,7 +147,7 @@ through our news...</pre></div>
   </div>
 
   <div class="newshighlightcontainer">
-    <img src="newsimages/news3.jpg">
+    <img src="static/newsimages/news3.jpg">
     <div class="text">swgvojsopdo dj 0psudp sd pogju oad gi]0[-di gpasgpu jsdpgupsdg r easgsg uring you that the vote is good</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">1 </span><span class="timetext">mins ago</span>
@@ -153,7 +156,7 @@ through our news...</pre></div>
  
 
   <div class="newshighlightcontainer">
-    <img src="newsimages/news4.jpg">
+    <img src="static/newsimages/news4.jpg">
     <div class="text">reassufsdchfioas ca cfhiuc hfh cfas hcoh oc asc asoihcoashxcoas hfring you that the vote is goasfasf odsdew</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">2 </span><span class="timetext">mins ago</span>
@@ -161,7 +164,7 @@ through our news...</pre></div>
   </div>
   
   <div class="newshighlightcontainer">
-    <img src="newsimages/news5.jpg">
+    <img src="static/newsimages/news5.jpg">
     <div class="text"> reassuring you that the vote is goodzxcac sfcoay fcosy a9oyas a9syfo yas iydqpwepoy9 weygwey 9pgy we9o wv9woe</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">3 </span><span class="timetext">mins ago</span>
@@ -170,7 +173,7 @@ through our news...</pre></div>
 
 
   <div class="newshighlightcontainer">
-    <img src="newsimages/news6.jpg">
+    <img src="static/newsimages/news6.jpg">
     <div class="text">rfsdjf pding you thadgs o sdohsdoihosdov sdo 0opsd cpsd puvsdp ujpdt the vote is good</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">4 </span><span class="timetext">mins ago</span>
@@ -179,7 +182,7 @@ through our news...</pre></div>
 
 
   <div class="newshighlightcontainer">
-    <img src="newsimages/news7.jpg">
+    <img src="static/newsimages/news7.jpg">
     <div class="text">sdfipwfu iwoi0u-pu fu 090pqu09u [0asu9pasuf c ufi-sdfi psdi ]-aik]sdi v-dpgoj a'go hvl gafgi ugtcf astgcf ias uyfstuift</div>
     <div class="timeposted">
       <img class="timer" src="icons/timer.png"><span class="timenumber">4 </span><span class="timetext">mins ago</span>
@@ -204,7 +207,7 @@ through our news...</pre></div>
 --------------------------------------------------------------------------------------------------------------------->
 <div class="newshighlightmobile">
 <div class="smallhighlight">
-  <img src="newsimages/news1.jpg">
+  <img src="static/newsimages/news1.jpg">
   <div class="text">
     hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
     <div class="timeposted">
@@ -214,7 +217,7 @@ through our news...</pre></div>
 </div>  
 
 <div class="smallhighlight">
-  <img src="newsimages/news2.jpg">
+  <img src="static/newsimages/news2.jpg">
   <div class="text">
     hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
     <div class="timeposted">
@@ -224,7 +227,7 @@ through our news...</pre></div>
 </div>  
 
 <div class="smallhighlight">
-  <img src="newsimages/news4.jpg">
+  <img src="static/newsimages/news4.jpg">
   <div class="text">
     hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
     <div class="timeposted">
@@ -249,7 +252,7 @@ through our news...</pre></div>
 <div class="sidebar">
   <div class="title">popular</div>
   <div class="smallhighlight">
-    <img src="newsimages/news1.jpg">
+    <img src="static/newsimages/news1.jpg">
     <div class="text">
       hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
       <div class="timeposted">
@@ -259,7 +262,7 @@ through our news...</pre></div>
   </div>  
   
   <div class="smallhighlight">
-    <img src="newsimages/news2.jpg">
+    <img src="static/newsimages/news2.jpg">
     <div class="text">
       hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
       <div class="timeposted">
@@ -269,7 +272,7 @@ through our news...</pre></div>
   </div>  
   
   <div class="smallhighlight">
-    <img src="newsimages/news4.jpg">
+    <img src="static/newsimages/news4.jpg">
     <div class="text">
       hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
       <div class="timeposted">
@@ -296,7 +299,7 @@ through our news...</pre></div>
 <!------------------------------------------------------------------------------------------------------------------
                               javascript
 --------------------------------------------------------------------------------------------------------------------->
-   <script src="java script/home.js"></script>
+<script src="{{url_for('static', filename='java script/home.js')}}"></script>
 <!-------------------------------------------------------------------------------------------------------------------->
 
 

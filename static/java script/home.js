@@ -38,7 +38,7 @@ var a = 1
 function slideshow(){
 	
     if(a == 1){
-	   document.getElementById("mainslide").setAttribute("src", "images/b8.jpg");
+	   document.getElementById("mainslide").src = "static/images/b8.jpg";
 	   document.getElementsByClassName("slidetext1")[0].innerHTML = "bringing the news your way";
 	   document.getElementsByClassName("news button")[0].innerHTML = "latest news";
 	   document.getElementsByClassName("news button")[0].style.color = "white";
@@ -46,7 +46,7 @@ function slideshow(){
 	   document.getElementsByClassName("slidecontentmobile")[0].style.top = "220px";
 	}
 	else if(a == 2){
-		document.getElementById("mainslide").setAttribute("src", "images/b15.jpg")
+		document.getElementById("mainslide").setAttribute("src", "static/images/b15.jpg")
 		document.getElementsByClassName("slidetext1")[0].innerHTML = "making your aware of the world";
 		document.getElementsByClassName("news button")[0].innerHTML = "Entertainment";
 		document.getElementsByClassName("news button")[0].style.color = "#8e12f3";
@@ -54,7 +54,7 @@ function slideshow(){
 		document.getElementsByClassName("slidecontentmobile")[0].style.top = "200px";
 	 }
 	 else if(a == 3){
-		document.getElementById("mainslide").setAttribute("src", "images/b11.jpg")
+		document.getElementById("mainslide").setAttribute("src", "static/images/b11.jpg")
 		document.getElementsByClassName("slidetext1")[0].innerHTML = "the world as a global village";
 		document.getElementsByClassName("news button")[0].innerHTML = "Sports";
 		document.getElementsByClassName("news button")[0].style.color = "#0fe46e";
@@ -88,7 +88,7 @@ function slideshow(){
 	 setTimeout("slideshow()", 5000);
 }
 function clicknav1(){
-	document.getElementById("mainslide").setAttribute("src", "images/b8.jpg");
+	document.getElementById("mainslide").setAttribute("src", "{{url_for('static', filename='images/b8.jpg')}}");
 	document.getElementsByClassName("slidenav1")[0].style.background = "#46846e";
 	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
 	document.getElementsByClassName("slidenav3")[0].style.background = "transparent";

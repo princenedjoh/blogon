@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posts</title>
+        <link rel="stylesheet" href="static/css/post.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Dancing+Script&family=Josefin+Sans:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+  
+  <body>
+<!--------------------------------------------------------------------------------------------------------------------
+            navigation bar
+--------------------------------------------------------------------------------------------------------------------->
+<nav id="navbar">
+  <div class="searchbutton">
+    <img src="static/icons/magnifier.png">
+  </div>
+    <div><img class="dashboardicon" onclick="menudropdown()" src="{{url_for('static', filename='icons/dashboard.png')}}"></div>
+    <div class="logo">
+     <span class="logoin">BLog</span>on
+    </div>
+    <div class="menuitems">
+     <div class="active"><a href="#">Home</a></div>
+     <div><a href="#">News</a></div>
+     <div><a href="#">Sports</a></div>
+     <div><a href="#">About</a></div>
+    </div>
+   </nav>
+   
+  <!-------------------------------------------------------------------------------------------------------------------->
+
+
+ <!--------------------------------------------------------------------------------------------------------------------
+                              side bar
+---------------------------------------------------------------------------------------------------------------------->  
+<div class="sidebar">
+    <div class="title">popular</div>
+    <div class="smallhighlight">
+      <img src="static/newsimages/news1.jpg">
+      <div class="text">
+        hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
+        <div class="timeposted">
+          <img class="timer" src="static/icons/timer.png"><span class="timenumber">4 </span><span class="timetext">mins ago</span>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="smallhighlight">
+      <img src="static/newsimages/news2.jpg">
+      <div class="text">
+        hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
+        <div class="timeposted">
+          <img class="timer" src="static/icons/timer.png"><span class="timenumber">4 </span><span class="timetext">mins ago</span>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="smallhighlight">
+      <img src="static/newsimages/news4.jpg">
+      <div class="text">
+        hhbbrerererbtbrgvrere vrerdoisah aishfosahfcohocuhoif 8c f
+        <div class="timeposted">
+          <img class="timer" src="static/icons/timer.png"><span class="timenumber">4 </span><span class="timetext">mins ago</span>
+        </div>
+      </div>
+    </div>  
+    <a href="#">
+      <div class="more">
+      More
+     </div>
+    </a>
+    </div>
+  
+  <!-------------------------------------------------------------------------------------------------------------------->  
+
+
+  <!--------------------------------------------------------------------------------------------------------------------
+                  blog post
+ ---------------------------------------------------------------------------------------------------------------------->
+ <div class="blogpostcontainer">
+     <div class="blogtitle">
+         {{post[0][1]}}
+     </div>
+
+     <div class="postcontainer2">
+     <div class="nameofauthor">
+      By {{post[0][2]}}
+     </div>
+     <div class="blogdate">
+      {{post[0][3]}}.
+     </div>
+     <div class="social">
+         <a href="instagram.com/nutflamme"><img src="static/icons/instagram.png"></a>
+         <a href="#"><img src="static/icons/facebooks.png"></a>
+         <a href="twitter.com/nutflame"><img src="static/icons/twitters.png"></a>
+     </div>
+     </div>
+
+
+     <div class="postcontainer">
+     <div class="blogimg1">
+      <img src="static/blogimages/{{id}}.jpg" alt="">
+     </div>
+     <div class="blogp1">
+      {{post[0][4]}}     
+    </div>
+    </div>
+
+ </div>
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+  <!--------------------------------------------------------------------------------------------------------------------
+                  menu items for mobile version
+ ---------------------------------------------------------------------------------------------------------------------->
+ 
+      <div class="menuitems1">
+     <div class="menuitems1elements" onclick="menuitems0()"><a href="#">Home</a></div>
+     <div class="menuitems1elements" onclick="menuitems1()"><a href="#">News</a></div>
+     <div class="menuitems1elements" onclick="menuitems2()"><a href="#">Sports</a></div>
+     <div class="menuitems1elements" onclick="menuitems3()"><a href="#">About</a></div>
+    </div>
+    
+ <!--------------------------------------------------------------------------------------------------------------------> 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------------------------------------
+                             javascript link
+------------------------------------------------------------------------------------------------->
+        <script src="static/java script/post.js"></script>
+
+<!------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------
+                       FOOTER
+---------------------------------------------------------------------------------------------------------------------->
+<div class="footer">
+  
+</div>
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------> 
+    </body>
+
+
+
+
+
+
+</html>
