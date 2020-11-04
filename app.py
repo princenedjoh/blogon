@@ -12,10 +12,10 @@ cursor = conn.cursor()
 #------------------------------------------------------------------------------
                  #creating all posts table
 #------------------------------------------------------------------------------
-cursor.execute("CREATE TABLE IF NOT EXISTS posts(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text, img1 blob, img2 blob, img3 blob )")
-cursor.execute("CREATE TABLE IF NOT EXISTS news(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text, img1 blob, img2 blob, img3 blob )")
-cursor.execute("CREATE TABLE IF NOT EXISTS entertainment(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text, img1 blob, img2 blob, img3 blob )")
-cursor.execute("CREATE TABLE IF NOT EXISTS sports(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text, img1 blob, img2 blob, img3 blob )")
+cursor.execute("CREATE TABLE IF NOT EXISTS posts(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text)")
+cursor.execute("CREATE TABLE IF NOT EXISTS news(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text)")
+cursor.execute("CREATE TABLE IF NOT EXISTS entertainment(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text)")
+cursor.execute("CREATE TABLE IF NOT EXISTS sports(id integer PRIMARY KEY, title text NOT NULL, author text NOT NULL, date text NOT NULL, p1 text NOT NULL, p2 text, p3 text)")
 
 
 
@@ -36,7 +36,6 @@ def convert(filename):
     with open(filename, 'rb') as file:
         image = file.read()
     return image
-
 #---------------------------------------------------------------------------------
 
 
@@ -68,8 +67,7 @@ def postcontent():
     title=request.form['title']
     nameofauthor=request.form['nameofauthor']
     img=request.files['img1']
-    ios="static/newsimages/news8.jpg"
-    photo = convert(ios)
+    ios=img.read()
     content=request.form['content']
     date=datetime.now().strftime("%Y, %b %w")
     conn = sqlite3.connect("allposts.sqlite")
@@ -77,8 +75,10 @@ def postcontent():
     news=request.form['news']
     entertainment=request.form['entertainment']
     sports=request.form['sports']
-    cursor.execute("INSERT INTO posts(title, author, date, p1, img1) VALUES(?,?,?,?,?)",(title, nameofauthor, date,content, photo))
+    cursor.execute("INSERT INTO posts(title, author, date, p1) VALUES(?,?,?,?)",(title, nameofauthor, date,content))
     conn.commit()
+    ida=cursor.execute("SELECT id FROM posts WHERE id=?", (cursor.lastrowid,))
+    photo=reconvert(ios, "static/blogimages/3.jpg")
     return img.filename
 
 
@@ -88,10 +88,17 @@ def apost(id):
   cursor=conn.cursor()
   cursor.execute("SELECT * FROM posts WHERE id=? ", (id,))
   post=cursor.fetchall()
-  img=post[0][7]
   ida=f"{id}"
-  photo=reconvert(img, "static/blogimages/"+ida+".jpg")
-  return render_template("post.html", post=post, photo=photo, id=id)
+  return render_template("post.html", post=post, id=ida)
+
+@app.route("/post", methods=["POST", "GET"])
+def new():
+    if request.method=="GET":
+       conn=sqlite3.connect('allposts.sqlite')
+       cursor=conn.cursor()
+       cursor.execute("SELECT * FROM posts WHERE id=?", (cursor.lastrowid,))
+       ida=cursor.fetchall()
+       return f"{ida}"
 
 
 if __name__== "__main__":

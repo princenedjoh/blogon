@@ -70,14 +70,15 @@ body{
 .newshighlightcontainer{
 	width:250px;
 	height:260px;
-	background:#ffffff;
+  background:#0000001a;
+  padding:10px;
+  border-radius: 10px;
   margin:0 auto;
   display:inline-block;
-  margin:0 20px;
+  margin:0 10px;
   transform: translateX(0px);
   font-weight:bold;
   color:rgba(0, 0, 0, 0.747);
-  box-shadow: 0 0 10px 0;
   margin-top: 20px;
   transform: translateX(0px);
 }
@@ -85,8 +86,8 @@ body{
 .placeinline{
   height:300px;
   display: flex;
-  width: 86%;
-  margin: 0 auto;
+  width: 100%;
+  margin: -10px auto;
   overflow: hidden;
 }
 .newslide{
@@ -95,7 +96,8 @@ body{
   height:300px;
   position:relative;
   margin-bottom: 50px;
-  background: white;
+  background: #ffffffa9;
+  padding-right: 10px;
 }
 .newshighlightcontainer img{
 	width:250px;
@@ -146,13 +148,18 @@ body{
 
 .sidebar{
   position: sticky;
-  top:80px;
+  top:100px;
   padding:10px;
   background: white;
-  left:100%;
-  height:540px;
+  float: right;
+  height:500px;
   overflow: scroll;
   width:300px;
+  margin-top: -35px;
+}
+.sidebaroverflow{
+  overflow:scroll;
+  height:385px;
 }
 .newshighlightmobile{
   display: none;
@@ -221,20 +228,57 @@ nav{
   margin:0 auto;
   text-align:center;
   padding:15px 0;
-  border-bottom:1px #7978a759 solid;
+}
+.menuitems1 div{
+  position: relative;
+  margin:0 auto;
+  padding:15px 0;
 }
  .menuitems1 div a{
-	 color:#ffffffe1;
-	 font-family: 'Courier New', Courier, monospace;
+	 color:#e9e9e9e1;
+   font-family: calibri;
+   margin-left: 10px;
+ }
+ .menuitems1 hr{
+   margin-left: 40px;
+   border:1px solid rgba(255, 255, 255, 0.075) !important;
+   margin-right: 40px;
+ }
+ .menuitems1 img{
+   width:25px;
+   position: relative;
+   top:6px;
+   margin-right: 10px;
+ }
+ .menuitems1 .social a{
+   margin:0 auto;
+ }
+ .menuitems1 .social img{
+   width: 47px;
+ }
+ .menuitems1 .hr1{
+  margin-left: 0px;
+  margin-right: 0px;
  }
 .menuitems1{
   width: 100%;
-  background: #1e263b;
+  background: #477b60;
   position: fixed;
   display:none;
-  top:55.2px;
+  top:40.49px;
   z-index:3;
+  transition:5s;
 }
+ .menuitems div a{
+
+   font-family:cursive;
+   font-size:12.5px;
+   color:#ffffffa8;
+   letter-spacing: 2px;
+   position:relative;
+   top:33%;
+   padding:0 15px;
+ }
  .menuitems div a{
 
    font-family:cursive;
@@ -272,6 +316,7 @@ nav{
   height:100%;
   position:relative;
   overflow: hidden;
+  
 }
 .shadow{
   width:100%;
@@ -284,20 +329,11 @@ nav{
 }
 .slidetxt{
 	color:white;
-	font-size:60px;
-  margin-left:20px;
+	font-size:50px;
+  margin-left:10px;
   position: absolute;
-  top:250px;
-  z-index: 2;
-}
-.slidetxt1{
-	color:white;
-	font-family:cursive;
-	font-size:20px;
-	margin-left:20px;
-  position: absolute;
-  top:370px;
-  margin-top:20px ;
+  top:300px;
+  font-family:calibri;
   z-index: 2;
 }
 
@@ -305,9 +341,9 @@ nav{
 .circles{
 	display:flex;
   flex-wrap:wrap;
+  margin-left:-50px;
   position: absolute;
-  top:300px;
-  left:60%;
+  top:350px;
   z-index: 2;
 }
 .circles img{
@@ -367,6 +403,7 @@ nav{
   top:220px;
   left:10px;
   display: none;
+  text-align: center;
 }
 .slidecontentmobile .slidetext1{
   font-size: 30px;
@@ -445,6 +482,73 @@ nav{
   position: absolute;
   top:115%
 }
+.searchbutton{
+  display: none;
+}
+.searchinput{
+  display: none;
+}
+
+.maincontainer{
+  width:70%;
+  background: white;
+  margin-top:-35px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.maincontainersub{
+  width:350px;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0px -110px 80px -10px;
+  padding:10px;
+  margin: 1px;
+}
+
+.maincontainersubtitle{
+  color:#ffffffd5;
+  position: relative;
+  font-size: 20px;
+  top:60%;
+}
+
+.maincontainersubcat{
+  padding:5px;
+  color:white;
+  background: #486a48;
+  width: fit-content;
+  text-align: center;
+}
+#maincontainersub1{
+  width: 539px;
+}
+#maincontainersub3, #maincontainersub4{
+  width:444.5px;
+}
+#maincontainersub5{
+  height:522px;
+}
+#maincontainersub6{
+  width:539px;
+}
+#maincontainersub7{
+  width:539px;
+  position: relative;
+  left:372px;
+  top:-272px;
+}
+.maincontainersubtitle .timeposted img{
+  width:22px;
+  position: relative;
+  top:5px;
+}
+.maincontainersubtitle .timeposted span{
+  color:#ffffff9f;
+  font-size: 15px;
+}
 
   /*---------------------------------------------------
      END OF MAIN
@@ -458,13 +562,15 @@ nav{
  /*----------------------------------------------------
            footer
  ------------------------------------------------------*/
-.footer{
+ .footer{
 	background:#0d0c1b;
 	width:100%;
-	height:200px;
-  margin-top:50px;
-  z-index: 1;
-}
+    height:200px;
+    position: relative;
+    margin-top: 100px;
+    top:100px;
+    z-index: 5;
+ }
  /*----------------------------------------------------
          end of footer
  ------------------------------------------------------*/
@@ -504,10 +610,13 @@ nav{
   .menuitems{
     display: none;
   }
+  body{
+    background: white;
+  }
   .logo{
     position:relative;
     font-size: 23px;
-    top: -16px;
+    top: -18px;
     left: 100px;
   }
   nav{
@@ -538,10 +647,41 @@ nav{
   }
   .slideshow{
     height:400px;
+    width: 100%;
+  }
+  .slide1{
+  }
+  .searchinput{
+    display:block;
+    z-index: 3;
+    position: fixed;
+    top:40.45px;
+    width: 100%;
+    display: none;
+  }
+  .searchinput input{
+    width:94%;
+    height: 35px;
+    border:none;
+    background: #e0e0e0;
+    padding-left: 5px;
+    padding-right: 20px;
+    box-shadow: 0px 7px 8px -10px;
+  }
+  .searchinput button{
+    padding: 5px;
+    border-radius: 2px;
+    position: relative;
+    background: #e0e0e0;
+    top:-32px;
+    left:91%;
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    outline: none;
+    color:grey;
   }
   .shadow{
     height:400px;
-    box-shadow: inset 0px -200px 100px -50px #000000bf
+    box-shadow: inset 0px -200px 100px -50px #000000bf;
   }
   .slidenav1, .slidenav2, .slidenav3{
     width:20px;
@@ -549,24 +689,31 @@ nav{
     border-radius: 50px;
     border:#ffffff50 1px solid;
   }
+  .newshighlightmobile hr{
+    width:97%;
+    border:1px solid #8080808a;
+    margin:0 auto;
+  }
   .newshighlightcontainer{
     display:block;
-    width:100%;
+    width:93%;
+    padding:10px;
     margin:10px auto;
     transform: translateX(0px);
     box-shadow: 0 0 0 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.233);
     border-left: none;
     border-right: none;
-    background:white;
+    background:#00000014;
+    border-radius: 10px;
   }
   .newshighlightcontainer img{ 
     width:100%;
+    border-radius: 10px;
   }
   .newslide{
     overflow: hidden;
     display: block;
-    height: 550px;
+    height: 580px;
     width: 100%;
     margin-bottom:0;
     border-bottom: none;
@@ -594,14 +741,20 @@ nav{
 .smallhighlight{
   width:95%;
   margin: 0 auto;
+  border-bottom:none;
 }
 .title{
-  margin:20px 0 0px 0;
+  margin:20px auto;
+  margin-top:20px;
+  margin-bottom: 10px;
   padding:10px 5px;
   font-size:15px;
   letter-spacing: 1px;
   font-weight: bold;
   color:#000000d2;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width:90%;
 }
 .more{
   display: block;
@@ -620,6 +773,9 @@ display:none;
 }
 .slidecontentmobile{
   display: block;
+}
+.maincontainer{
+  display: none;
 }
 
 }

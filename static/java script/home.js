@@ -54,7 +54,7 @@ function slideshow(){
 		document.getElementsByClassName("slidecontentmobile")[0].style.top = "200px";
 	 }
 	 else if(a == 3){
-		document.getElementById("mainslide").setAttribute("src", "static/images/b11.jpg")
+		document.getElementById("mainslide").setAttribute("src", "static/images/b16.jpg")
 		document.getElementsByClassName("slidetext1")[0].innerHTML = "the world as a global village";
 		document.getElementsByClassName("news button")[0].innerHTML = "Sports";
 		document.getElementsByClassName("news button")[0].style.color = "#0fe46e";
@@ -103,7 +103,7 @@ function clicknav2(){
 	a = 2;
 };
 function clicknav3(){
-	document.getElementById("mainslide").setAttribute("src", "images/b11.jpg");
+	document.getElementById("mainslide").setAttribute("src", "images/b16.png");
 	document.getElementsByClassName("slidenav3")[0].style.background = "#46846e";
 	document.getElementsByClassName("slidenav1")[0].style.background = "transparent"
 	document.getElementsByClassName("slidenav2")[0].style.background = "transparent"
@@ -161,3 +161,30 @@ window.onscroll = function(){
 
 
 //-------------------------------------------------------------------------------------------------------------
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------
+//                                search input display and hide
+//----------------------------------------------------------------------------------------------------------------
+function searchinput(){
+		if(document.getElementsByClassName("searchinput")[0].style.display=="none"){
+			document.getElementsByClassName("searchinput")[0].style.display="block";
+
+		}
+		else{
+			document.getElementsByClassName("searchinput")[0].style.display="none"
+			document.getElementsByClassName("searchbutton2")[0].style.background="#e0e0e0"
+		}
+		document.getElementsByClassName("searchbutton2")[0].onclick = function(){
+			document.getElementsByClassName("searchbutton2")[0].style.background="#477b60"
+		}
+		
+	}
+	
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------

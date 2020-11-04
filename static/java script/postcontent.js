@@ -18,3 +18,10 @@ function add0(){
     x1=x1+1;
     }
 }
+
+
+function expose(){
+    var x = document.getElementById("gogo").value
+    document.getElementById("expose").innerHTML = x
+}
+

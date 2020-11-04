@@ -13,7 +13,7 @@
             navigation bar
 --------------------------------------------------------------------------------------------------------------------->
 <nav id="navbar">
-  <div class="searchbutton">
+  <div class="searchbutton" onclick="searchinput()">
     <img src="static/icons/magnifier.png">
   </div>
     <div><img class="dashboardicon" onclick="menudropdown()" src="{{url_for('static', filename='icons/dashboard.png')}}"></div>
@@ -21,7 +21,7 @@
      <span class="logoin">BLog</span>on
     </div>
     <div class="menuitems">
-     <div class="active"><a href="#">Home</a></div>
+     <div><a href="#">Home</a></div>
      <div><a href="#">News</a></div>
      <div><a href="#">Sports</a></div>
      <div><a href="#">About</a></div>
@@ -102,8 +102,10 @@
      <div class="blogimg1">
       <img src="static/blogimages/{{id}}.jpg" alt="">
      </div>
+     <div class="postcontainer">
      <div class="blogp1">
       {{post[0][4]}}     
+    </div>
     </div>
     </div>
 
@@ -117,6 +119,18 @@
 
 <!---------------------------------------------------------------------------------------------------------------------->
 
+ <!-----------------------------------------------------------------------------------------------------------------------
+                            search input
+-------------------------------------------------------------------------------------------------------------------------->
+<div class="searchinput">
+  <input type="text" placeholder="search" class="searchinput2">
+  <button class="searchbutton2">go</button>
+</div>
+
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
 
 
 
@@ -132,10 +146,23 @@
  ---------------------------------------------------------------------------------------------------------------------->
  
       <div class="menuitems1">
-     <div class="menuitems1elements" onclick="menuitems0()"><a href="#">Home</a></div>
-     <div class="menuitems1elements" onclick="menuitems1()"><a href="#">News</a></div>
-     <div class="menuitems1elements" onclick="menuitems2()"><a href="#">Sports</a></div>
-     <div class="menuitems1elements" onclick="menuitems3()"><a href="#">About</a></div>
+     <div class="menuitems1elements" onclick="menuitems0()"><a href="#"><img src="static/icons/home.png">Home</a></div>
+     <hr>
+     <div class="menuitems1elements" onclick="menuitems1()"><a href="#"><img src="static/icons/menu.png">News</a></div>
+     <hr>
+     <div class="menuitems1elements" onclick="menuitems2()"><a href="#"><img src="static/icons/foot.png">Sports</a></div>
+     <hr>
+     <div class="menuitems1elements" onclick="menuitems3()"><a href="#"><img src="static/icons/about.png">About</a></div>
+
+    <hr class="hr1">
+     
+    <div class="menuitems1elements"><a href="#"><img src="static/icons/world.png">Let's connect</a></div>
+     <div class="social">
+      <a href="instagram.com/nutflamme"><img src="static/icons/instagram.png"></a>
+      <a href="#"><img src="static/icons/facebooks.png"></a>
+      <a href="twitter.com/nutflame"><img src="static/icons/twitters.png"></a>
+  </div>
+  <hr class="hr1"><br>
     </div>
     
  <!--------------------------------------------------------------------------------------------------------------------> 

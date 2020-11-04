@@ -177,21 +177,40 @@ input{
  .menuitems1 div{
   position: relative;
   margin:0 auto;
-  text-align:center;
   padding:15px 0;
-  border-bottom:1px #7978a759 solid;
 }
  .menuitems1 div a{
-	 color:#ffffffe1;
-	 font-family: 'Courier New', Courier, monospace;
+	 color:#e9e9e9e1;
+   font-family: calibri;
+   margin-left: 10px;
+ }
+ .menuitems1 hr{
+   margin-left: 40px;
+   border:1px solid rgba(255, 255, 255, 0.267) !important;
+ }
+ .menuitems1 img{
+   width:25px;
+   position: relative;
+   top:6px;
+   margin-right: 10px;
+ }
+ .menuitems1 .social a{
+   margin:0 auto;
+ }
+ .menuitems1 .social img{
+   width: 47px;
+ }
+ .menuitems1 .hr1{
+  margin-left: 0px;
  }
 .menuitems1{
   width: 100%;
-  background: #1e263b;
+  background: #477b60;
   position: fixed;
   display:none;
-  top:55.2px;
+  top:40.49px;
   z-index:3;
+  transition:5s;
 }
  .menuitems div a{
 
@@ -280,6 +299,9 @@ input{
      color:rgba(0, 0, 0, 0.74);
  }
 .searchbutton{
+  display: none;
+}
+.searchinput{
   display: none;
 }
 
@@ -430,8 +452,50 @@ body{
     font-size: 40px;
     font-weight: bold;
     color: #000000be;
+    margin:0 auto;
     margin-bottom: 6px;
-    margin-left: 7px;
+    margin-left: 12px;
+}
+.searchinput{
+  display:block;
+  z-index: 3;
+  position: fixed;
+  top:40.45px;
+  width: 100%;
+  display: none;
+}
+.searchinput input{
+  width:94%;
+  height: 35px;
+  border:none;
+  background: #e0e0e0;
+  padding-left: 5px;
+  padding-right: 20px;
+  box-shadow: 0px 7px 8px -10px;
+}
+.searchinput button{
+  padding: 5px;
+  border-radius: 2px;
+  position: relative;
+  background: #e0e0e0;
+  top:-32px;
+  left:91%;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  outline: none;
+  color:grey;
+}
+.title{
+  margin:20px auto;
+  margin-top:20px;
+  margin-bottom: 0px;
+  padding:10px 5px;
+  font-size:15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:#000000d2;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width:90%;
 }
 .nameofauthor{
     margin-left: 10px;
@@ -464,6 +528,7 @@ body{
     width:100%;
     position: relative;
     height: 250px;
+    border-radius: 10px;
 }
 .blogp1, .blogp2, .blogp3{
     margin-left: 0px;
